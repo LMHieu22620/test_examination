@@ -4,6 +4,7 @@
 
 import { MessageIcon, NotifiIcon, SearchIcon } from "@/public/svg";
 import { SwitchMode } from "../SwitchMode";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -27,11 +28,12 @@ export default function Header() {
                     <div>
                         <NotifiIcon />
                     </div>
-                    <img
+                    {/* <img
                         className='w-full h-full  rounded-full'
                         // src={Avartar}
                         alt='Rounded avatar'
-                    />
+                    /> */}
+                    <Link href={'/login'}>login</Link>
                 </div>
                 <div className='flex md:hidden w-full justify-between items-center'>
                     <button
