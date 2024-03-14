@@ -22,7 +22,7 @@ export default function Home() {
                 const payload = await res.json()
 
                 if (res.ok) {
-                    setData(payload)
+                    setData(payload.results)
                 }
                 return data
 
@@ -71,9 +71,7 @@ export default function Home() {
 
                             </tr>
                         </thead>
-                        {data.results && data?.results.map((item: any, index: number) => {
-                            console.log(item, 'itemmmm');
-
+                        {data.map((item: any, index: number) => {
                             return (
                                 <tbody key={item.id}>
                                     <tr className='border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600'>
